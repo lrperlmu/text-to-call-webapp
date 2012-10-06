@@ -214,66 +214,11 @@ foreman start
 4) Tweak away on `app.py`.
 
 
-## Testing
+## TODO
 
-This hackpack comes with a full testing suite ready for nose.
+Things that aren't done:
 
-<pre>
-make test
-</pre>
-
-It also ships with an easy-to-use base class for testing your
-[TwiML](http://www.twilio.com/docs/api/twiml).  For example, testing a basic SMS
-response is only two lines of code:
-
-```python
-import test_twilio
-
-class ExampleTest(test_twilio.TwiMLTest):
-    response = self.sms("Test")
-    self.assertTwiML(response)
-```
-
-You can also test your [Gather
-verbs](http://www.twilio.com/docs/api/twiml/gather) for voice apps very easily.
-
-```python
-import test_twilio
-
-class ExampleTest(test_twilio.TwiMLTest):
-    response = self.call(digits="1")
-    self.assertTwiML(response)
-```
-
-
-## Branches
-
-Two configurations are available in different branches:
-
-* master - Default dev mode with minimum possible code to get going.
-* production - Intended for live use with more code and dependencies appropriate
-  to a production environment. To deploy this branch instead, adjust your
-  procedure for the production branch:
-
-<pre>
-git checkout production
-git push heroku production:master
-</pre>
-
-
-## Meta 
-
-* No warranty expressed or implied.  Software is as is. Diggity.
-* [MIT License](http://www.opensource.org/licenses/mit-license.html)
-* Lovingly crafted by [Twilio New
- York](http://www.meetup.com/Twilio/New-York-NY/) 
-
-
-## Community Contributors
-
-Here we recognize crack members of the Twilio community who worked on this
-hackpack.
-
-* [Timothée Boucher](http://www.timotheeboucher.com/) - idea for production
-  branch
-* [Oscar](http://labcoder.com/) - Bug fix for user input
+- It uses phone numbers instead of FK numbers. Need to change it so that it uses
+  FK numbers and looks up the phone number from the database.
+- Make it go to voicemail.
+- Use configurable Twilio information.
