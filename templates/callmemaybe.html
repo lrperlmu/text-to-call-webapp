@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Client{% endblock %}
+
+{% block head %}
+<link href="http://static0.twilio.com/packages/quickstart/client.css"
+  type="text/css" rel="stylesheet" />
+{% if not configuration_error %}
+<script type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
+</script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<form method="post">
+  <textarea name="message">Bonjour, ceci est Twilio.</textarea>
+  <input type="submit" value="Say it on the phone" />
+</form>
+{% if configuration_error %}
+{{ configuration_error }}
+{% else %}
+Loading pigeons...
+{% endif %}
+</div>
+{% endblock %}
