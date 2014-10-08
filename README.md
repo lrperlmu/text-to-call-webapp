@@ -1,3 +1,16 @@
+# Womens Peer to Peer IVR App
+
+We're using this Twilio/Heroku/Flask hackpack to get started on an app for Womens Peer to Peer Network.
+
+## Goal
+Maintain a database of users and their current and previous phone numbers. Users should be able to 
+change thier phone number by calling in, entering user ID and entering new phone number.
+
+
+## Google doc link
+https://docs.google.com/document/d/1CXWLMX9-eu3YNg1ovE9ncavb3TUENddzYzxMViTmZ-w/edit#heading=h.okbjc1v1zohu
+
+
 # Twilio Hackpack for Heroku and Flask
 
 An easy-to-use repo to kickstart your Twilio app using Flask and deploy onto
